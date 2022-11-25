@@ -15,8 +15,6 @@ public class Launcher {
         venta1.agregarCliente(cliente1);
         venta1.agregarVendedor(vendedor1);
         venta1.agregarInmueble(inmueble1);
-        venta1.quitarInmueble(inmueble2);
-        venta1.buscarInmueblePorMaterial(new Inmueble("Metal", "Los Alamoa 2019, Pucón", "150.000"));
         GestorDatos.registrarDatos(venta1.getVendedores(), "baseDeDatos.txt");
         GestorDatos.registrarDatos(venta1.getClientes(), "baseDeDatos.txt");
         GestorDatos.registrarDatos(venta1.getInmubeles(), "baseDeDatos.txt");

@@ -1,3 +1,5 @@
+import jdk.incubator.vector.FloatVector;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -57,6 +59,22 @@ public class Venta {
         for(Inmueble inmueble:this.inmuebles){
             if(inmueble.getPrecio().equals(precio)){
                 return inmueble;
+            }
+        }
+        return null;
+    }
+    public Cliente quitarClienteRepetido(Cliente run){
+        for(Cliente cliente:this.clientes){
+            if(cliente.getRun().equals(run)){
+                this.clientes.remove(cliente);
+            }
+        }
+        return null;
+    }
+    public Vendedor quitarVendedorRepetido(Vendedor run){
+        for(Vendedor vendedor:this.vendedores){
+            if(vendedor.getRun().equals(run)){
+                this.clientes.remove(vendedor);
             }
         }
         return null;
