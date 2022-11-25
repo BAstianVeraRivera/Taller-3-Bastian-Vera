@@ -18,12 +18,10 @@ public class Venta {
     }
     private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     private ArrayList<Vendedor> vendedores = new ArrayList<Vendedor>();
-    private ArrayList<Inmueble> inmubeles = new ArrayList<Inmueble>();
-    private ArrayList<Venta> ventas = new ArrayList<Venta>();
-    public ArrayList<Venta> getVentas() {return ventas;}
+    private ArrayList<Inmueble> inmuebles = new ArrayList<Inmueble>();
     public ArrayList<Vendedor> getVendedores() {return vendedores;}
     public ArrayList<Cliente> getClientes() {return clientes;}
-    public ArrayList<Inmueble> getInmubeles() {return inmubeles;}
+    public ArrayList<Inmueble> getInmubeles() {return inmuebles;}
 
     //agregar cliente
     public void agregarCliente(Cliente cliente) {
@@ -37,17 +35,17 @@ public class Venta {
     }
     //agregar inmueble
     public void agregarInmueble(Inmueble inmueble) {
-        this.inmubeles.add(inmueble);
+        this.inmuebles.add(inmueble);
         System.out.println("Inmueble agregado");
     }
     // quitar inmueble
     public void quitarInmueble(Inmueble inmueble) {
-        this.inmubeles.remove(inmueble);
+        this.inmuebles.remove(inmueble);
         System.out.println("El inmueble se ha dado de baja");
     }
     // buscar por material
     public Inmueble buscarInmueblePorMaterial(Inmueble tipoConstruccion){
-        for(Inmueble inmueble:this.inmubeles){
+        for(Inmueble inmueble:this.inmuebles){
             if(inmueble.getTipoConstruccion().equals(tipoConstruccion)){
                 return inmueble;
             }
@@ -56,7 +54,7 @@ public class Venta {
     }
     //buscar por precio
     public Inmueble buscarInmueblePorPrecio(Inmueble precio){
-        for(Inmueble inmueble:this.inmubeles){
+        for(Inmueble inmueble:this.inmuebles){
             if(inmueble.getPrecio().equals(precio)){
                 return inmueble;
             }
